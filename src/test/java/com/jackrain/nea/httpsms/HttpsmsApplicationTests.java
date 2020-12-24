@@ -24,7 +24,7 @@ class HttpsmsApplicationTests {
     @Test
     void querySendDetails() throws Exception{
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("phone_number","15951815424"); //需查询的手机号
+        jsonObject.put("phone_number",""); //需查询的手机号
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
         jsonObject.put("timestamp","2020-12-18 10:32:10"); //当前时间
         jsonObject.put("send_date","20201215");  //需查询的发送日期
@@ -39,9 +39,9 @@ class HttpsmsApplicationTests {
     @Test
     void sendSms() throws Exception{
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("phone_numbers","15951815424"); //发送的手机号
+        jsonObject.put("phone_numbers",""); //发送的手机号
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-18 13:34:10"); //当前时间
+        jsonObject.put("timestamp","2020-12-24 14:02:10"); //当前时间
         jsonObject.put("sign_name","伯俊支付1"); //签名名称
         jsonObject.put("template_code","SMS_206855019"); //模板编号
         jsonObject.put("sms_channel","ALI_SMS"); //短信渠道
@@ -55,7 +55,7 @@ class HttpsmsApplicationTests {
     @Test
     void sendBatchSms() throws Exception{
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("phone_numbers_json","['15951815424','17667931217','15195953877']"); //发送的手机号
+        jsonObject.put("phone_numbers_json","['','','']"); //发送的手机号
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
         jsonObject.put("timestamp","2020-12-18 13:47:55");//当前时间
         jsonObject.put("sign_name_json","['伯俊支付1','伯俊支付','伯俊支付1']"); //签名名称
@@ -72,9 +72,9 @@ class HttpsmsApplicationTests {
     void addSmsTemplate() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-18 14:19:55");//当前时间
+        jsonObject.put("timestamp","2020-12-24 10:35:55");//当前时间
         jsonObject.put("template_name","伯俊支付4"); //模板名称
-        jsonObject.put("template_content","您正在申请手机注册伯俊云，验证码为：${code}，60分钟内有效！"); //模板正文
+        jsonObject.put("template_content","您正在申请手机注册伯俊云，验证码为：${code}，60分钟内有效1！"); //模板正文
         jsonObject.put("template_type",0); //模板类型 其中：0：验证码。1：短信通知。2：推广短信。3：国际/港澳台消息
         jsonObject.put("sms_channel","ALI_SMS"); //短信渠道
         jsonObject.put("remark","22222"); //备注
@@ -127,7 +127,7 @@ class HttpsmsApplicationTests {
     void addSmsSign() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-18 15:07:55");//当前时间
+        jsonObject.put("timestamp","2020-12-24 10:13:55");//当前时间
         jsonObject.put("sign_name","伯俊支付123"); //签名名称
         jsonObject.put("remark","222222"); //备注
         jsonObject.put("sign_source",5); //签名来源。其中：0：企事业单位的全称或简称。1：工信部备案网站的全称或简称。2：APP应用的全称或简称。3：公众号或小程序的全称或简称。4：电商平台店铺名的全称或简称。5：商标名的全称或简称
