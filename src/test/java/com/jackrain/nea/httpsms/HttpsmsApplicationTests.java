@@ -122,8 +122,8 @@ class HttpsmsApplicationTests {
     void addSmsSign() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 17:41:55");//当前时间
-        jsonObject.put("sign_name","伯俊12345签名20"); //签名名称
+        jsonObject.put("timestamp","2020-12-29 16:09:55");//当前时间
+        jsonObject.put("sign_name","伯俊12345签名2011"); //签名名称
         jsonObject.put("sms_channel","ALI_SMS"); //短信渠道
         jsonObject.put("remark","222222"); //备注
         jsonObject.put("sign_source",5); //签名来源。其中：0：企事业单位的全称或简称。1：工信部备案网站的全称或简称。2：APP应用的全称或简称。3：公众号或小程序的全称或简称。4：电商平台店铺名的全称或简称。5：商标名的全称或简称
