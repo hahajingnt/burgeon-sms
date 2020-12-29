@@ -26,7 +26,7 @@ class HttpsmsApplicationTests {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("phone_number","15951815424"); //需查询的手机号
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-18 10:32:10"); //当前时间
+        jsonObject.put("timestamp","2020-12-28 17:49:10"); //当前时间
         jsonObject.put("send_date","20201215");  //需查询的发送日期
         jsonObject.put("sms_channel","ALI_SMS"); //短信渠道，使用阿里
         jsonObject.put("page_size",10);  //分页参数
@@ -41,10 +41,9 @@ class HttpsmsApplicationTests {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("phone_numbers","15951815424"); //发送的手机号
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 15:45:10"); //当前时间
-        jsonObject.put("sign_code","SIGN_2012281094211630"); //签名名称
-        jsonObject.put("platform_template_code","971dfe460be74155996ce5b7b66b891e"); //模板编号
-        jsonObject.put("sms_channel","ALI_SMS"); //短信渠道
+        jsonObject.put("timestamp","2020-12-28 19:20:10"); //当前时间
+        jsonObject.put("sign_code","SIGN_2012251879581011"); //签名名称
+        jsonObject.put("platform_template_code","TEMPLATE_2012281105638218"); //模板编号
         jsonObject.put("template_param","{'code':'11112222222222'}"); //模板参数
         jsonObject.put("books","N"); //是否记账 Y或者N
         jsonObject.put("developKey",developKey); //签名用的key
@@ -57,10 +56,9 @@ class HttpsmsApplicationTests {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("phone_numbers_json","['15951815424','17667931217','15195953877']"); //发送的手机号
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-24 19:47:55");//当前时间
-        jsonObject.put("sign_name_json","['伯俊支付1','伯俊支付','伯俊支付1']"); //签名名称
-        jsonObject.put("template_code","SMS_206855019"); //模板编号
-        jsonObject.put("sms_channel","ALI_SMS"); //短信渠道
+        jsonObject.put("timestamp","2020-12-28 19:13:55");//当前时间
+        jsonObject.put("sign_code_json","['SIGN_2012251879581011','SIGN_2012251879581011','SIGN_2012251879581011']"); //签名名称
+        jsonObject.put("platform_template_code","TEMPLATE_2012281105638218"); //模板编号
         jsonObject.put("template_param","[{'code':'111222'},{'code':'222333'},{'code':'333444'}]"); //模板参数
         jsonObject.put("books","N");//是否记账 Y或者N
         jsonObject.put("developKey",developKey); //签名用的key
@@ -124,8 +122,8 @@ class HttpsmsApplicationTests {
     void addSmsSign() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 16:03:55");//当前时间
-        jsonObject.put("sign_name","没有你们，旭弟狗篮子不是"); //签名名称
+        jsonObject.put("timestamp","2020-12-28 17:41:55");//当前时间
+        jsonObject.put("sign_name","伯俊12345签名20"); //签名名称
         jsonObject.put("sms_channel","ALI_SMS"); //短信渠道
         jsonObject.put("remark","222222"); //备注
         jsonObject.put("sign_source",5); //签名来源。其中：0：企事业单位的全称或简称。1：工信部备案网站的全称或简称。2：APP应用的全称或简称。3：公众号或小程序的全称或简称。4：电商平台店铺名的全称或简称。5：商标名的全称或简称
@@ -148,9 +146,9 @@ class HttpsmsApplicationTests {
     void modifySmsSign() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 16:18:55");//当前时间
-        jsonObject.put("sign_code","SIGN_2012281094211630"); //签名平台编码
-        jsonObject.put("remark","222222"); //备注
+        jsonObject.put("timestamp","2020-12-28 17:43:55");//当前时间
+        jsonObject.put("sign_code","SIGN_2012281564112365"); //签名平台编码
+        jsonObject.put("remark","asdsadsadzxczxczxc"); //备注
         jsonObject.put("sign_source",4); //签名来源。其中：0：企事业单位的全称或简称。1：工信部备案网站的全称或简称。2：APP应用的全称或简称。3：公众号或小程序的全称或简称。4：电商平台店铺名的全称或简称。5：商标名的全称或简称
         jsonObject.put("developKey",developKey); //签名用的key
         //签名数组 包含多个签名文件
@@ -171,8 +169,8 @@ class HttpsmsApplicationTests {
     void querySmsSign() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 16:28:55");//当前时间
-        jsonObject.put("sign_code","SIGN_2012280089084693"); //签名平台编码
+        jsonObject.put("timestamp","2020-12-28 17:44:55");//当前时间
+        jsonObject.put("sign_code","SIGN_2012251879581011"); //签名平台编码
         jsonObject.put("developKey",developKey); //签名用的key
         JSONObject jsonResult = smsDemo.querySmsSign(jsonObject);
         log.info(jsonResult.toJSONString());
