@@ -5,11 +5,15 @@ import com.jackrain.nea.httpsms.util.Constant;
 import com.jackrain.nea.httpsms.util.RestTemplateUtil;
 import com.jackrain.nea.httpsms.util.SignUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
 public class SmsDemo {
+
+    @Value("${r3.sms.url}")
+    private String baseUrl;
 
     private final RestTemplateUtil restTemplateUtil;
 
@@ -25,7 +29,7 @@ public class SmsDemo {
      */
     public JSONObject querySendDetails(JSONObject jsonObject) throws Exception {
         putSign(jsonObject);
-        String result = restTemplateUtil.doPostApi(Constant.BASE_url + Constant.SMS_querySendDetails,jsonObject.toJSONString());
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_querySendDetails,jsonObject.toJSONString());
         return JSONObject.parseObject(result);
     }
 
@@ -37,7 +41,7 @@ public class SmsDemo {
      */
     public JSONObject sendSms(JSONObject jsonObject) throws Exception {
         putSign(jsonObject);
-        String result = restTemplateUtil.doPostApi(Constant.BASE_url + Constant.SMS_sendSms,jsonObject.toJSONString());
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_sendSms,jsonObject.toJSONString());
         return JSONObject.parseObject(result);
     }
 
@@ -49,7 +53,7 @@ public class SmsDemo {
      */
     public JSONObject sendBatchSms(JSONObject jsonObject) throws Exception {
         putSign(jsonObject);
-        String result = restTemplateUtil.doPostApi(Constant.BASE_url + Constant.SMS_sendBatchSms,jsonObject.toJSONString());
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_sendBatchSms,jsonObject.toJSONString());
         return JSONObject.parseObject(result);
     }
 
@@ -62,7 +66,7 @@ public class SmsDemo {
      */
     public JSONObject addSmsTemplate(JSONObject jsonObject) throws Exception {
         putSign(jsonObject);
-        String result = restTemplateUtil.doPostApi(Constant.BASE_url + Constant.SMS_addSmsTemplate,jsonObject.toJSONString());
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_addSmsTemplate,jsonObject.toJSONString());
         return JSONObject.parseObject(result);
     }
 
@@ -74,7 +78,7 @@ public class SmsDemo {
      */
     public JSONObject modifySmsTemplate(JSONObject jsonObject) throws Exception {
         putSign(jsonObject);
-        String result = restTemplateUtil.doPostApi(Constant.BASE_url + Constant.SMS_modifySmsTemplate,jsonObject.toJSONString());
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_modifySmsTemplate,jsonObject.toJSONString());
         return JSONObject.parseObject(result);
     }
 
@@ -86,7 +90,7 @@ public class SmsDemo {
      */
     public JSONObject querySmsTemplate(JSONObject jsonObject) throws Exception {
         putSign(jsonObject);
-        String result = restTemplateUtil.doPostApi(Constant.BASE_url + Constant.SMS_querySmsTemplate,jsonObject.toJSONString());
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_querySmsTemplate,jsonObject.toJSONString());
         return JSONObject.parseObject(result);
     }
 
@@ -98,7 +102,7 @@ public class SmsDemo {
      */
     public JSONObject deleteSmsTemplate(JSONObject jsonObject) throws Exception {
         putSign(jsonObject);
-        String result = restTemplateUtil.doPostApi(Constant.BASE_url + Constant.SMS_deleteSmsTemplate,jsonObject.toJSONString());
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_deleteSmsTemplate,jsonObject.toJSONString());
         return JSONObject.parseObject(result);
     }
 
@@ -110,7 +114,7 @@ public class SmsDemo {
      */
     public JSONObject addSmsSign(JSONObject jsonObject) throws Exception {
         putSign(jsonObject);
-        String result = restTemplateUtil.doPostApi(Constant.BASE_url + Constant.SMS_addSmsSign,jsonObject.toJSONString());
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_addSmsSign,jsonObject.toJSONString());
         return JSONObject.parseObject(result);
     }
 
@@ -122,7 +126,7 @@ public class SmsDemo {
      */
     public JSONObject modifySmsSign(JSONObject jsonObject) throws Exception {
         putSign(jsonObject);
-        String result = restTemplateUtil.doPostApi(Constant.BASE_url + Constant.SMS_modifySmsSign,jsonObject.toJSONString());
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_modifySmsSign,jsonObject.toJSONString());
         return JSONObject.parseObject(result);
     }
 
@@ -134,7 +138,7 @@ public class SmsDemo {
      */
     public JSONObject querySmsSign(JSONObject jsonObject) throws Exception {
         putSign(jsonObject);
-        String result = restTemplateUtil.doPostApi(Constant.BASE_url + Constant.SMS_querySmsSign,jsonObject.toJSONString());
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_querySmsSign,jsonObject.toJSONString());
         return JSONObject.parseObject(result);
     }
 
@@ -146,7 +150,7 @@ public class SmsDemo {
      */
     public JSONObject deleteSmsSign(JSONObject jsonObject) throws Exception {
         putSign(jsonObject);
-        String result = restTemplateUtil.doPostApi(Constant.BASE_url + Constant.SMS_deleteSmsSign,jsonObject.toJSONString());
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_deleteSmsSign,jsonObject.toJSONString());
         return JSONObject.parseObject(result);
     }
 

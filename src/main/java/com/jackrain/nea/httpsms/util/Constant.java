@@ -2,8 +2,6 @@ package com.jackrain.nea.httpsms.util;
 
 public class Constant {
 
-    public final static String BASE_url = "http://sms-web-qa.sms.piplus.cn";
-
     public final static String SMS_querySendDetails = "/v1/sms/querySendDetails";
 
     public final static String SMS_sendSms = "/v1/sms/sendSms";
