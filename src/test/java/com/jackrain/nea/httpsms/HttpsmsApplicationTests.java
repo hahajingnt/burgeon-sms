@@ -11,6 +11,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Slf4j
 @RunWith(SpringRunner.class)
@@ -50,7 +52,6 @@ class HttpsmsApplicationTests {
         jsonObject.put("sign_code","SIGN_2012251879581011"); //签名名称
         jsonObject.put("platform_template_code","TEMPLATE_2012281105638218"); //模板编号
         jsonObject.put("template_param","{'code':'11112222222222'}"); //模板参数
-        jsonObject.put("books","N"); //是否记账 Y或者N
         jsonObject.put("developKey",developKey); //签名用的key
         JSONObject jsonResult = smsDemo.sendSms(jsonObject);
         log.info(jsonResult.toJSONString());
@@ -65,7 +66,6 @@ class HttpsmsApplicationTests {
         jsonObject.put("sign_code_json","['SIGN_2012251879581011','SIGN_2012251879581011','SIGN_2012251879581011']"); //签名名称
         jsonObject.put("platform_template_code","TEMPLATE_2012281105638218"); //模板编号
         jsonObject.put("template_param","[{'code':'111222'},{'code':'222333'},{'code':'333444'}]"); //模板参数
-        jsonObject.put("books","N");//是否记账 Y或者N
         jsonObject.put("developKey",developKey); //签名用的key
         JSONObject jsonResult = smsDemo.sendBatchSms(jsonObject);
         log.info(jsonResult.toJSONString());
@@ -192,4 +192,19 @@ class HttpsmsApplicationTests {
         JSONObject jsonResult = smsDemo.deleteSmsSign(jsonObject);
         log.info(jsonResult.toJSONString());
     }
+
+    @Test
+    void customSendSms() throws Exception{
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("phone_numbers","13917954629"); //发送的手机号
+        jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timestamp = simpleDateFormat.format(new Date());
+        jsonObject.put("timestamp",timestamp); //当前时间
+        jsonObject.put("content","【伯俊测试】你好，世界"); //签名名称
+        jsonObject.put("developKey",developKey); //签名用的key
+        JSONObject jsonResult = smsDemo.customSendSms(jsonObject);
+        log.info(jsonResult.toJSONString());
+    }
+
 }

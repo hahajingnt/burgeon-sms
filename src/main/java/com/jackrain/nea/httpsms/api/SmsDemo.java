@@ -57,6 +57,18 @@ public class SmsDemo {
         return JSONObject.parseObject(result);
     }
 
+    /**
+     * 自定义短信发送
+     * @param jsonObject
+     * @return
+     * @throws Exception
+     */
+    public JSONObject customSendSms(JSONObject jsonObject) throws Exception {
+        putSign(jsonObject);
+        String result = restTemplateUtil.doPostApi(baseUrl + Constant.SMS_customSendSms,jsonObject.toJSONString());
+        return JSONObject.parseObject(result);
+    }
+
 
     /**
      * 新增模板

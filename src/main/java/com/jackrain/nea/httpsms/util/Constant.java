@@ -6,6 +6,8 @@ public class Constant {
 
     public final static String SMS_sendSms = "/v1/sms/sendSms";
 
+    public final static String SMS_customSendSms = "/v1/sms/customSendSms";
+
     public final static String SMS_sendBatchSms = "/v1/sms/sendBatchSms";
 
     public final static String SMS_addSmsTemplate = "/v1/sms/addSmsTemplate";

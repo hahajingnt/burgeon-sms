@@ -59,7 +59,9 @@ public class SignUtils {
         }
         paramStr = new StringBuilder(paramStr.substring(0, paramStr.length() - 1) + key);
         log.info("被签名的字符串："+paramStr.toString());
-        return getMD5(paramStr.toString());
+        String md5Str = getMD5(paramStr.toString());
+        log.info("签名："+ md5Str);
+        return md5Str;
     }
 
     /*
