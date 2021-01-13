@@ -33,7 +33,9 @@ class HttpsmsApplicationTests {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("phone_number","15951815424"); //需查询的手机号
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 17:49:10"); //当前时间
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timestamp = simpleDateFormat.format(new Date());
+        jsonObject.put("timestamp",timestamp); //当前时间
         jsonObject.put("send_date","20201215");  //需查询的发送日期
         jsonObject.put("sms_channel","ALI_SMS"); //短信渠道，使用阿里
         jsonObject.put("page_size",10);  //分页参数
@@ -48,7 +50,9 @@ class HttpsmsApplicationTests {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("phone_numbers","15951815424"); //发送的手机号
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 19:20:10"); //当前时间
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timestamp = simpleDateFormat.format(new Date());
+        jsonObject.put("timestamp",timestamp); //当前时间
         jsonObject.put("sign_code","SIGN_2012251879581011"); //签名名称
         jsonObject.put("platform_template_code","TEMPLATE_2012281105638218"); //模板编号
         jsonObject.put("template_param","{'code':'11112222222222'}"); //模板参数
@@ -62,7 +66,9 @@ class HttpsmsApplicationTests {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("phone_numbers_json","['15951815424','17667931217','15195953877']"); //发送的手机号
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 19:13:55");//当前时间
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timestamp = simpleDateFormat.format(new Date());
+        jsonObject.put("timestamp",timestamp); //当前时间
         jsonObject.put("sign_code_json","['SIGN_2012251879581011','SIGN_2012251879581011','SIGN_2012251879581011']"); //签名名称
         jsonObject.put("platform_template_code","TEMPLATE_2012281105638218"); //模板编号
         jsonObject.put("template_param","[{'code':'111222'},{'code':'222333'},{'code':'333444'}]"); //模板参数
@@ -75,7 +81,9 @@ class HttpsmsApplicationTests {
     void addSmsTemplate() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 16:34:55");//当前时间
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timestamp = simpleDateFormat.format(new Date());
+        jsonObject.put("timestamp",timestamp); //当前时间
         jsonObject.put("template_name","伯俊支付4"); //模板名称
         jsonObject.put("template_content","您正在申请手机注册伯俊云，验证码为：${code}，10分钟内有效1！"); //模板正文
         jsonObject.put("template_type",0); //模板类型 其中：0：验证码。1：短信通知。2：推广短信。3：国际/港澳台消息
@@ -90,7 +98,9 @@ class HttpsmsApplicationTests {
     void modifySmsTemplate() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 16:37:55");//当前时间
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timestamp = simpleDateFormat.format(new Date());
+        jsonObject.put("timestamp",timestamp); //当前时间
         jsonObject.put("template_name","伯俊支付4"); //模板名称
         jsonObject.put("template_content","您正在申请手机注册伯俊云，验证码为：${code}，60分钟内有效！"); //模板正文
         jsonObject.put("template_type",0); //模板类型 其中：0：验证码。1：短信通知。2：推广短信。3：国际/港澳台消息
@@ -105,7 +115,9 @@ class HttpsmsApplicationTests {
     void querySmsTemplate() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 16:38:55");//当前时间
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timestamp = simpleDateFormat.format(new Date());
+        jsonObject.put("timestamp",timestamp); //当前时间
         jsonObject.put("platform_template_code","TEMPLATE_2012281105638210"); //平台模板编号
         jsonObject.put("developKey",developKey); //签名用的key
         JSONObject jsonResult = smsDemo.querySmsTemplate(jsonObject);
@@ -116,7 +128,9 @@ class HttpsmsApplicationTests {
     void deleteSmsTemplate() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 16:39:55");//当前时间
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timestamp = simpleDateFormat.format(new Date());
+        jsonObject.put("timestamp",timestamp); //当前时间
         jsonObject.put("platform_template_code","TEMPLATE_2012281105638210"); //模板编码
         jsonObject.put("developKey",developKey); //签名用的key
         JSONObject jsonResult = smsDemo.deleteSmsTemplate(jsonObject);
@@ -152,7 +166,9 @@ class HttpsmsApplicationTests {
     void modifySmsSign() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 17:43:55");//当前时间
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timestamp = simpleDateFormat.format(new Date());
+        jsonObject.put("timestamp",timestamp); //当前时间
         jsonObject.put("sign_code","SIGN_2012281564112365"); //签名平台编码
         jsonObject.put("remark","asdsadsadzxczxczxc"); //备注
         jsonObject.put("sign_source",4); //签名来源。其中：0：企事业单位的全称或简称。1：工信部备案网站的全称或简称。2：APP应用的全称或简称。3：公众号或小程序的全称或简称。4：电商平台店铺名的全称或简称。5：商标名的全称或简称
@@ -175,7 +191,9 @@ class HttpsmsApplicationTests {
     void querySmsSign() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 17:44:55");//当前时间
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timestamp = simpleDateFormat.format(new Date());
+        jsonObject.put("timestamp",timestamp); //当前时间
         jsonObject.put("sign_code","SIGN_2012251879581011"); //签名平台编码
         jsonObject.put("developKey",developKey); //签名用的key
         JSONObject jsonResult = smsDemo.querySmsSign(jsonObject);
@@ -186,7 +204,9 @@ class HttpsmsApplicationTests {
     void deleteSmsSign() throws Exception{
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("cus_no","640A947719AA748AE77FD788B98374FA"); //商户编号
-        jsonObject.put("timestamp","2020-12-28 16:27:55");//当前时间
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String timestamp = simpleDateFormat.format(new Date());
+        jsonObject.put("timestamp",timestamp); //当前时间
         jsonObject.put("sign_code","SIGN_2012281094211630"); //签名平台编码
         jsonObject.put("developKey",developKey); //签名用的key
         JSONObject jsonResult = smsDemo.deleteSmsSign(jsonObject);
