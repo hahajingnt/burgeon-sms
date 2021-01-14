@@ -53,7 +53,7 @@ class HttpsmsApplicationTests {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String timestamp = simpleDateFormat.format(new Date());
         jsonObject.put("timestamp",timestamp); //当前时间
-        jsonObject.put("sign_code","SIGN_2012251879581011"); //签名名称
+        jsonObject.put("platform_sign_code","SIGN_2012251879581011"); //签名名称
         jsonObject.put("platform_template_code","TEMPLATE_2012281105638218"); //模板编号
         jsonObject.put("template_param","{'code':'11112222222222'}"); //模板参数
         jsonObject.put("developKey",developKey); //签名用的key
