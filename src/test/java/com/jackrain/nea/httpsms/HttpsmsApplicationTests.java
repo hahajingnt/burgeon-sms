@@ -37,7 +37,6 @@ class HttpsmsApplicationTests {
         String timestamp = simpleDateFormat.format(new Date());
         jsonObject.put("timestamp",timestamp); //当前时间
         jsonObject.put("send_date","20201215");  //需查询的发送日期
-        jsonObject.put("sms_channel","ALI_SMS"); //短信渠道，使用阿里
         jsonObject.put("page_size",10);  //分页参数
         jsonObject.put("current_page",1); //分页参数
         jsonObject.put("developKey",developKey);  //签名用的key
