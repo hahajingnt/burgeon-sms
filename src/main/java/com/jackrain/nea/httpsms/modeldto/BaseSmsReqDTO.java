@@ -34,6 +34,12 @@ public class BaseSmsReqDTO {
     @JSONField(name = "sms_channel")
     private String smsChannel;
 
+    /**
+     * 使用的渠道
+     */
+    @JSONField(name = "developKey")
+    private String developerKey;
+
     public String toJSONString() {
         return JSON.toJSONString(this);
     }
