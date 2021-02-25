@@ -118,8 +118,8 @@ class HttpsmsApplicationTests {
         sendBatchSmsReqDTO.setPhoneNumbersJson("[\'15951815424\',\'17667931217\',\'15195953877\']");
         sendBatchSmsReqDTO.setCusNo("9B5EE3243AF0C297038CDEB40968A39F");
         sendBatchSmsReqDTO.setTimestamp(timestamp);
-        sendBatchSmsReqDTO.setTemplateParam("{\"code\":\"11112222222222\"}");
-        sendBatchSmsReqDTO.setSignCodeJson("[\'SIGN_2101151651186646\',\'SIGN_2012251879581011\',\'SIGN_2012251879581011\']");
+        sendBatchSmsReqDTO.setTemplateParamJson("{\"code\":\"11112222222222\"}");
+        sendBatchSmsReqDTO.setPlatformSignCodeJson("[\'SIGN_2101151651186646\',\'SIGN_2012251879581011\',\'SIGN_2012251879581011\']");
         sendBatchSmsReqDTO.setPlatformTemplateCode("TEMPLATE_2101152135241650");
         sendBatchSmsReqDTO.setDeveloperKey("aebd7ebe48a94cd08790c678514d2eda");
         sendBatchSmsReqDTO.setSmsChannel("ZHUT_SMS");

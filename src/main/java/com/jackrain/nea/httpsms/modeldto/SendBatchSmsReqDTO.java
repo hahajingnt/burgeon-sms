@@ -20,8 +20,8 @@ public class SendBatchSmsReqDTO extends BaseSmsReqDTO {
     /**
      * 短信签名code
      */
-    @JSONField(name = "sign_code_json")
-    private String signCodeJson;
+    @JSONField(name = "platform_sign_code_json")
+    private String platformSignCodeJson;
 
     /**
      * 短信模板平台code
@@ -38,8 +38,8 @@ public class SendBatchSmsReqDTO extends BaseSmsReqDTO {
     /**
      * 短信模板变量对应的实际值 json数组格式
      */
-    @JSONField(name = "template_param")
-    private String templateParam;
+    @JSONField(name = "template_param_json")
+    private String templateParamJson;
 
     /**
      * 是否记账 Y或者N
