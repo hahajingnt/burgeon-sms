@@ -57,6 +57,12 @@ public class AddSmsSignReqDTO extends BaseSmsReqDTO {
      */
     private String app;
 
+    /**
+     * 短信类型
+     */
+    @JSONField(name = "sms_type")
+    private String smsType;
+
     @Override
     public String toJSONString() {
         return JSON.toJSONString(this);
