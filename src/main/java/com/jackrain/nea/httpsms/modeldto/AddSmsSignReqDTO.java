@@ -40,6 +40,23 @@ public class AddSmsSignReqDTO extends BaseSmsReqDTO {
     @JSONField(name = "sign_file")
     private JSONArray signFile;
 
+    /**
+     * 是否上线，默认为0
+     */
+    @JSONField(name = "is_online")
+    private String isOnline;
+
+    /**
+     * 官网网址
+     */
+    @JSONField(name = "web_site")
+    private String webSite;
+
+    /**
+     * 备注：sign_source 为3同时is_online是1时，web_site和app选填一个 app链接
+     */
+    private String app;
+
     @Override
     public String toJSONString() {
         return JSON.toJSONString(this);
