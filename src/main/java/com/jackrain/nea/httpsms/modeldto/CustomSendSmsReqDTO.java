@@ -41,4 +41,7 @@ public class CustomSendSmsReqDTO extends BaseSmsReqDTO {
     @JSONField(name = "extend")
     private String extend;
 
+    @JSONField(name = "sms_type")
+    private String smsType;
+
 }
